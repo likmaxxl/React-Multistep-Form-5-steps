@@ -1,0 +1,97 @@
+.formButtons{
+  position: absolute;
+  bottom:-75px;
+  width:100%;
+  left:0;
+  display: flex;
+}
+.formButtons .btn{
+  width:50%;
+}
+.formButtons .btn button{
+  border:none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-shadow: 1px 1px 0px rgb(0 0 0 / 40%);
+font-size: 16px;
+text-transform: capitalize;
+cursor: pointer;
+background-image: linear-gradient(to bottom, #00BDFD 25%, #047BD4 100%);
+color:white;
+height:54px;
+line-height: 50px;
+padding:0 0 10px 10px;
+width:170px;
+margin-top:20px;
+
+}
+.formButtons .btn button:focus{
+  outline:none;
+}
+.formButtons .btn button:hover{
+  background-image: linear-gradient(to top, #00BDFD 25%, #047BD4 100%);
+}
+.formButtons .btn:nth-of-type(2) button{
+justify-content: flex-start;
+align-items: center;
+
+}
+.formButtons .btn button .nextIcon{
+border-left:solid 1px #adabbe;
+display: block;
+position: absolute;
+padding:0 7px 0 7px;
+right:0;
+top:2px;
+font-size: 21px;
+}
+.formButtons .btn button .nextSpan{
+  position: absolute;
+  font-size: 11px;
+  bottom:-11px;
+  left:11px;
+
+}
+.formButtons .btn:nth-of-type(1){
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+.formButtons .btn:nth-of-type(2){
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.formButtons .btn:nth-of-type(1) button{
+justify-content: flex-end;
+align-items: center;
+padding:0 10px 10px 0;
+}
+.formButtons .btn button .previousIcon{
+border-right:solid 1px #adabbe;
+display: block;
+position: absolute;
+padding:0 7px 0 7px;
+left:0;
+top:2px;
+font-size: 21px;
+}
+.formButtons .btn button .previousSpan{
+  position: absolute;
+  font-size: 11px;
+  bottom:-11px;
+  right:11px;
+
+}
+/********RESPONSIVE MEDIA QUERY**********/
+@media all and (min-width:992px){
+  .formButtons{
+    background: white;
+    padding:10px;
+      bottom:-85px;
+
+  }
+}

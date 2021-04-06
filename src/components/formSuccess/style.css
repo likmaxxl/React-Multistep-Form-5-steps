@@ -1,0 +1,28 @@
+.successForm{
+  position: relative;
+min-height: 505px;
+}
+.successForm .successContent{
+  text-align: center;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.successForm .successContent .icon{
+  font-size: 240px;
+  color:#92cf5c;
+}
+.successForm .successContent .text p{
+  margin:0;
+  padding:0;
+
+}
+.successForm .successContent .text p:nth-of-type(1){
+  font-size: 45px;
+  font-weight: 600;
+  color:#3b3b3b;
+}
+.successForm .successContent .text p:nth-of-type(2){
+  color:#585858;
+}

@@ -1,0 +1,38 @@
+.headerFormInformations{
+  display: flex;
+padding:15px 6px 15px 6px;
+background:white;
+}
+.headerFormInformations .headerTextInfo,
+.headerFormInformations .stepsInfo{
+  width:50%;
+  font-size: 20px;
+}
+.headerFormInformations .headerTextInfo{
+  display: flex;
+  align-items: flex-start;
+    justify-content: flex-start;
+      color:#7e8b8f
+}
+.headerFormInformations .stepsInfo{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color:#636363;
+;
+}
+.headerFormInformations .headerTextInfo .text b,
+.headerFormInformations .headerTextInfo .icon{
+  color:#5cb0cf;
+}
+.headerFormInformations .headerTextInfo .icon{
+  margin-right: 6px;
+}
+
+
+/******RESPONSIVE MEDIA QUERY********/
+@media all and (min-width:992px){
+  .headerFormInformations {
+    padding: 15px 15px 15px 15px
+  }
+}

@@ -1,23 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
+import MultistepForm from './components/MultistepForm'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/*https://0.s3.envato.com/files/94682367/form-wizard-with-icon1.html*/}
+      {/* https://www.npmjs.com/package/react-input-mask#examples */}
+<MultistepForm/>
     </div>
   );
 }

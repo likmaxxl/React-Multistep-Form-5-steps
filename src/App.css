@@ -1,38 +1,219 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap');
+body{
+  padding:0;
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+form{
+  width:100%;
+}
+#multistepFormSignUp{
+  position: relative;
+  height: 100vh;
+
+}
+#multistepFormSignUp .multiStepForm{
+  position: absolute;
+  width:100%;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%,-5%);
+/* padding:0 5px; */
+
+}
+#multistepFormSignUp .multiStepForm #steps{
+  min-height:505px;
+  background-color: #f2f7f9;
+      border: 1px solid #d0dde1;
+      border-radius: 4px;
+      padding:10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/***FIELDS**/
+.selectOption{
+  width:100%;
+}
+.inputs{
+  display: block;
+width:100%;
+
+}
+.input,.selectBox{
+    width:100%;
+ position: relative;
+ margin-top:10px;
+}
+ .label{
+  font-size: 13px;
+  color:#748286;
+  margin-bottom:3px;
+  text-transform: capitalize;
+}
+input,select{
+  width:100%;
+  padding: 9px 32px 8px 10px;
+  box-shadow: inset 0px -3px 0px 0px rgb(219 219 219 / 75%);
+  border:solid 1px #dedede;
+}
+.selectBox{
+  position: relative;
+width:100%;
+}
+.selectOption{
+  background: white;
+}
+select{
+  appearance: none;
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 100% 50%;
+color:#7b7b7b;
+}
+select:after{
+  position: absolute;
+  width:100px;
+  height:100px;
+  background:red;
+  content:'';
+  top:0;
+  right:0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input:focus,
+select:focus{
+ box-shadow: 0 2px 2px rgb(0 0 0 / 8%) inset, 0 0 8px rgb(3 127 215 / 90%);
+ border:none;
+ outline:none;
+}
+.input .icon{
+  position: absolute;
+  top: 26px;
+  right: 9px;
+  color: #5CB0CF;
+  font-size: 18px;
+}
+.select{
+  display: block;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/***ERROR INPUT FIELDS***/
+.errorInput{
+  z-index: 2;
+  position: relative;
+
+      width: 260px;
+
+      text-align: left;
+      padding: 10px;
+      background: rgb(251, 107, 91);
+      border-radius: 5px;
+      color: white;
+      animation-name: errorAnim;
+      animation-duration: .5s;
+      margin-top:10px;
+}
+@keyframes errorAnim {
+  0%{
+    transform: scale(0);
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    transform: scale(1.1);
   }
+  100%{
+    transform: scale(1);
+  }
+}
+.errorInput:before{
+
+  position: absolute;
+  content:'';
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 10px 10px 10px;
+border-color: transparent transparent rgb(251, 107, 91) transparent;
+top: -3%;
+left: 16px;
+transform: translate(0,-45%);
+}
+.errorInput p{
+  margin:0;
+  padding:0;
+}
+.errorInput p:nth-of-type(1){
+  font-size: 14px;
+  font-weight: bold;
+}
+.errorInput p:nth-of-type(2){
+  padding-top:30px;
+  font-size: 11px;
+}
+/**BUTTONS**/
+/* .formButtons{
+  position: absolute;
+  bottom:-75px;
+  width:100%;
+  left:0;
+}
+.formButtons .btn{
+  width:50%;
+} */
+
+/*********RESPONSIVE MEDIA QUERY***************/
+@media all and (min-width:992px){
+body{
+  background-image: -webkit-gradient(radial, center center, 0, center center, 500, color-stop(0, #FFFFFF), color-stop(1, #6BCDF1));
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #6BCDF1 100%);
+    background-image: radial-gradient(circle farthest-corner at center, #FFFFFF 0%, #6BCDF1 100%);
+}
+  #multistepFormSignUp .multiStepForm{
+    /* width: 1030px; */
+    width:992px;
+    background: white;
+
+      /* box-shadow: 7px 7px 0px 0px rgb(50 50 50 / 30%); */
+  }
+#multistepFormSignUp .multiStepForm #steps{
+  margin:0 13px;
+}
+  form{
+    width:60%;
+  }
+  .inputs{
+    display: flex;
+  }
+  .errorInput{
+    width:243px;
+    position: absolute;
+    margin-top:0;
+
+      right: -268px;
+    top: -16px;
+  }
+  .errorInput:before{
+    top:50%;
+    left:-12px;
+    transform:translate(0,-50%);
+    border-color: transparent rgb(251, 107, 91) transparent transparent;
+    border-width: 10px 15px 10px 0;
+  }
+  .select{
+    display: flex;
+  }
+
 }

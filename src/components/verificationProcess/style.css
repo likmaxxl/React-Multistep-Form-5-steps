@@ -1,0 +1,184 @@
+.processHeader{
+
+  text-transform: capitalize;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #F0F0F0));
+border-bottom: 1px solid #dadada;
+border-top:1px solid #dadada;
+padding-left:35px;
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+}
+.processHeader h2{
+  color:#757575;
+}
+.processHeader h2 span{
+  color:#59bbdf;
+}
+.processCircles{
+background:white;
+  padding:0 0 3px 0;
+  display: none;
+  border-bottom:solid 1px #dadada;
+}
+
+.processCircles .circle{
+  margin: 30px 0 0 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+flex-grow: 1;
+ flex-shrink: 1;
+ flex-basis: 0;
+padding: 0 27px 0 27px;
+
+}
+.processCircles .circle .icon{
+width:55px;
+height:55px;
+font-size: 21px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+margin-bottom:10px;
+background: #eaeaea;
+color:#a9a9a9;
+position: relative;
+}
+.processCircles .circle:nth-of-type(1) .icon:after,
+.processCircles .circle:nth-of-type(2) .icon:after,
+.processCircles .circle:nth-of-type(3) .icon:after{
+position: absolute;
+top:50%;
+left:100%;
+content:"";
+width:203px;
+height:5px;
+background: #eaeaea;
+
+}
+
+.processCircles .circle .circleInfo{
+position: relative;
+padding-left:31px;
+}
+.processCircles .circle .circleInfo .circleIconInfo{
+  position: absolute;
+  top:-6px;
+  left:9px;
+  color:#92cf5c;
+}
+.processCircles .circle .circleInfo .circleTextInfo h4{
+  font-size: 15px;
+  margin:0;
+  padding:0;
+  text-align: left;
+color: #757575;
+}
+.processCircles .circle .circleInfo .circleTextInfo p{
+  font-size: 10px;
+  text-align:left;
+margin-top:4px;
+}
+
+
+/***Animation Progress Background red LEFT TO RIGHT***/
+
+.sucsessBarFromLeftToRightRed:after{
+  position: absolute !important;
+    /* top: 50% !important; */
+    /* left: 100% !important; */
+    content: "" !important;
+    width: 202px !important;
+    height: 5px !important;
+   animation-name: progressbar1R !important;
+  background-size: 200% 100% !important;
+  animation-duration: .6s;
+background-image: linear-gradient(to left, #fb6b5b 50%, #eaeaea 50%) !important;
+animation-fill-mode: forwards;
+  /* background-position: -50% 0 !important; */
+}
+@keyframes progressbar1R {
+  0%,
+  33% {
+    background-position: 0 0;
+  }
+  66%,
+  100% {
+    background-position: -100% 0;
+  }
+}
+.iconSucssesBackgroundRed{
+  animation-name: backgroundOpacityR;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+}
+@keyframes backgroundOpacityR{
+  0%{
+    background:#eaeaea;
+color:#a9a9a9;
+  }
+  100%{
+    background: #fb6b5b;
+    color:white;
+  }
+}
+
+
+
+/**ANIMATION PROGRESSBAR background green LEFT TO RIGHT*/
+.sucsessBarFromLeftToRightGreen:after{
+
+  position: absolute !important;
+   top: 50% !important;
+    left: 100% !important;
+    content: "" !important;
+    width: 202px !important;
+    height: 5px !important;
+   animation-name: progressbar1 !important;
+  background-size: 200% 100% !important;
+  animation-duration: .6s;
+background-image: linear-gradient(to left, #92cf5c 50%, #fb6b5b 50%)!important ;
+animation-fill-mode: forwards;
+
+}
+@keyframes progressbar1 {
+  0%{
+
+    background-position: 0 0;
+
+  }
+
+  100% {
+
+    background-position: -100% 0;
+  }
+}
+.iconSucssesBackgroundGreen{
+  animation-name: backgroundOpacity;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+}
+@keyframes backgroundOpacity{
+  0%{
+    transform: scale(1);
+    background:#fb6b5b;
+color:#a9a9a9;
+  }
+  50%{
+      transform: scale(1.2);
+  }
+  100%{
+      transform: scale(1);
+    background: #92cf5c;
+    color:white;
+  }
+}
+
+/****RESPONSIVE MEDIA QUERY*********/
+@media all and (min-width:992px){
+  .processCircles{
+    display: flex;
+  }
+}
